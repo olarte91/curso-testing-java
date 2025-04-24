@@ -8,22 +8,22 @@ public class PasswordUtilTest {
 
     @Test
     public void low_when_has_less_than_8_letters() {
-        assertEquals(PasswordUtil.assessPassword("12AB*4"),LOW );
+        assertEquals(LOW, PasswordUtil.assessPassword("12AB*4"));
     }
 
     @Test
     public void low_when_has_only_letters() {
-        assertEquals(PasswordUtil.assessPassword("1234567"), LOW);
+        assertEquals(LOW, PasswordUtil.assessPassword("1234567"));
     }
 
     @Test
     public void medium_when_has_letters_and_numbers() {
-        assertEquals(PasswordUtil.assessPassword("abcd12345"), MEDIUM);
+        assertEquals(MEDIUM, PasswordUtil.assessPassword("abcd12345"));
     }
 
     @Test
     public void strong_when_has_letters_numbers_and_symbols() {
-        assertEquals(PasswordUtil.assessPassword("abcd12345!"), HIGH);
+        assertEquals(HIGH, PasswordUtil.assessPassword("abcd12345!"));
     }
     
 
